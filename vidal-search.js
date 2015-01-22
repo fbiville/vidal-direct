@@ -27,7 +27,15 @@ var 	logoUrl = chrome.extension.getURL('logo_vidal.png'),
 		return text.match(/\d+/)[0];
 	},
 	highlight = function(results) {
-		console.log(results);
+		var titles = $.map(results, function(res) {
+			return res.title;
+		});
+		console.log(titles);
+		$("body *").highlight(titles, {
+			element: 'a', 
+			className:'vidal-result',
+			wordsOnly: true
+		});
 	};
 
 document.querySelector('body').insertAdjacentHTML(
