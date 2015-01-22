@@ -17,5 +17,10 @@
 	"web_accessible_resources": ["*.png"],
 	"permissions": [
     		"http://*.vidal.fr/"
-  	]
+  	],
+	"icons": {
+		"16": "logo_vidal_16.png",
+		"48": "logo_vidal_48.png",
+		"128": "logo_vidal_128.png"
+	}
 }
