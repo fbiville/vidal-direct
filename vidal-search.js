@@ -30,7 +30,6 @@ var 	logoUrl = chrome.extension.getURL('logo_vidal.png'),
 		var titles = $.map(results, function(res) {
 			return res.title;
 		});
-		console.log(titles);
 		$("body *").highlight(titles, {
 			element: 'a', 
 			className:'vidal-result',
