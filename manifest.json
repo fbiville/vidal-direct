@@ -7,6 +7,8 @@
 
 	"content_scripts": [{
 		"matches": ["http://*/*", "https://*/*"],
-		"js": ["vidal-search.js"]			
-	}]
+		"js": ["vidal-search.js"],
+		"css": ["vidal-search.css"]			
+	}],
+	"web_accessible_resources": ["*.png"]
 }
