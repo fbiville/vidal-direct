@@ -1,3 +1,3 @@
 # Vidal Search
 
-Chrome add-on to highligh drug on any web pages.
+Chrome add-on to highlight drug on any web pages.
