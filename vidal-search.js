@@ -1,0 +1,1 @@
+alert('Vidal Search');
