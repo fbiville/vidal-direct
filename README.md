@@ -1,3 +1,3 @@
 # Vidal Search
 
-Chrome add-on to highlight drug on any web pages.
+Chrome add-on to highlight any [Vidal](http://www.vidal.fr) on any web page.
