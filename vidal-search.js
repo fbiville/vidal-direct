@@ -1,11 +1,18 @@
 var 	logoUrl = chrome.extension.getURL('logo_vidal.png'),
     	search = function() {
-		alert('Calling APIs');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://api.vidal.fr/rest/api/products?page-size=1000', true);
+		xhr.onreadystatechange = function() {
+  			if (xhr.readyState == 4) {
+    				console.log(xhr.responseText);
+ 			}
+		}
+		xhr.send();
 	};
+
 document.querySelector('body').insertAdjacentHTML(
 	'beforeend', 
-	'<input id="vidal-search" type="image" src="' + logoUrl + '" alt="Vidal Search"  />'
+	'<img id="vidal-search" src="' + logoUrl + '" alt="Vidal Search"  />'
 );
 
-document.querySelector('#vidal-search')
-	.addEventListener('click', search);
+search();

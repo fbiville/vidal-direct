@@ -10,5 +10,8 @@
 		"js": ["vidal-search.js"],
 		"css": ["vidal-search.css"]			
 	}],
-	"web_accessible_resources": ["*.png"]
+	"web_accessible_resources": ["*.png"],
+	"permissions": [
+    		"http://*.vidal.fr/"
+  	]
 }
