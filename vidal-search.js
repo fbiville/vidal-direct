@@ -36,6 +36,15 @@ var 	logoUrl = chrome.extension.getURL('logo_vidal.png'),
 			className:'vidal-result',
 			wordsOnly: true
 		});
+		$(".vidal-result").each(function(unused, el) {
+			for (var i = 0; i < results.length; i++) {
+				var res = results[i];
+				if (res.title.toLowerCase() == $(el).text()) {
+					el.href = "http://www.vidal.fr/substances/"+ res.id +"/"+ encodeURIComponent(res.title) +"/";
+					el.target = '_blank';
+				}
+			}
+		});
 	};
 
 document.querySelector('body').insertAdjacentHTML(
